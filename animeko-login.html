@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Login — AnimêKo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="animeko-inicial.css" rel="stylesheet">
+<link href="animeko-login.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="ticker"><span>⚠ ISTO NÃO É UM SITE REAL — NENHUM LOGIN AQUI É PROCESSADO DE VERDADE — É SÓ UM LAYOUT HTML ⚠ &nbsp;&nbsp;&nbsp; ⚠ ISTO NÃO É UM SITE REAL — NENHUM LOGIN AQUI É PROCESSADO DE VERDADE — É SÓ UM LAYOUT HTML ⚠</span></div>
+
+<header>
+  <div class="logo">Animê<em>Ko</em></div>
+  <nav>
+    <a href="animeko-inicial.html">Animes</a>
+    <a href="#">Filmes</a>
+    <a href="#">Gênero</a>
+    <a href="#">Temporada</a>
+    <a href="#">Discord</a>
+    <a href="#" style="color:var(--amber)">Login|Cadastro</a>
+  </nav>
+  <div class="search-box">
+    🔍 <input type="text" placeholder="buscar anime..." />
+  </div>
+</header>
+
+<div class="login-wrap">
+  <div class="login-card">
+    <a href="animeko-inicial.html" class="back-home">← voltar pro catálogo</a>
+    <div class="login-logo">Animê<em>Ko</em></div>
+    <div class="login-sub">entra aí pra ver anúncio autenticado</div>
+
+    <form onsubmit="return false;">
+      <div class="field">
+        <label for="email">E-mail ou usuário</label>
+        <div class="input-shell">
+          <span>✉</span>
+          <input id="email" type="text" placeholder="kitsune_92@exemplo.com" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="senha">Senha</label>
+        <div class="input-shell">
+          <span>🔒</span>
+          <input id="senha" type="password" placeholder="••••••••" />
+          <button type="button" class="toggle-pw" onclick="const i=document.getElementById('senha'); i.type = i.type==='password' ? 'text' : 'password'; this.textContent = i.type==='password' ? 'mostrar' : 'ocultar';">mostrar</button>
+        </div>
+      </div>
+
+      <div class="row-between">
+        <label class="remember">
+          <input type="checkbox" />
+          lembrar de mim
+        </label>
+        <a href="#" class="forgot">esqueci (de novo)</a>
+      </div>
+
+      <button type="submit" class="btn-login">Entrar</button>
+    </form>
+
+    <div class="divider">ou continue com</div>
+    <div class="oauth-row">
+      <button class="btn-oauth" type="button">🅶 Google</button>
+      <button class="btn-oauth" type="button">🅳 Discord</button>
+    </div>
+
+    <p class="signup-hint">Ainda não tem conta? <a href="#">Cadastre-se e finja que leu os termos</a></p>
+
+    <p class="fine-print">© 2026 AnimêKo — este formulário não envia nada a lugar nenhum.<br>Nenhum dado é salvo, nenhuma senha é validada, nenhuma responsabilidade é assumida.</p>
+  </div>
+</div>
+
+</body>
+</html>
