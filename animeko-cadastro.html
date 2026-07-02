@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Cadastro — AnimêKo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="animeko-inicial.css" rel="stylesheet">
+<link href="animeko-signup.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="ticker"><span>⚠ ISTO NÃO É UM SITE REAL — NENHUM CADASTRO AQUI É PROCESSADO DE VERDADE — É SÓ UM LAYOUT HTML ⚠ &nbsp;&nbsp;&nbsp; ⚠ ISTO NÃO É UM SITE REAL — NENHUM CADASTRO AQUI É PROCESSADO DE VERDADE — É SÓ UM LAYOUT HTML ⚠</span></div>
+
+<header>
+  <div class="logo">Animê<em>Ko</em></div>
+  <nav>
+    <a href="animeko-inicial.html">Animes</a>
+    <a href="#">Filmes</a>
+    <a href="#">Gênero</a>
+    <a href="#">Temporada</a>
+    <a href="#">Discord</a>
+    <a href="animeko-login.html" style="color:var(--amber)">Login|Cadastro</a>
+  </nav>
+  <div class="search-box">
+    🔍 <input type="text" placeholder="buscar anime..." />
+  </div>
+</header>
+
+<div class="signup-wrap">
+  <div class="signup-card">
+    <a href="animeko-inicial.html" class="back-home">← voltar pro catálogo</a>
+    <div class="signup-logo">Animê<em>Ko</em></div>
+    <div class="signup-sub">crie sua conta e ganhe zero benefícios reais</div>
+
+    <form onsubmit="return false;">
+      <div class="field">
+        <label for="nome">Nome de usuário</label>
+        <div class="input-shell">
+          <span>👤</span>
+          <input id="nome" type="text" placeholder="kitsune_92" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">E-mail</label>
+        <div class="input-shell">
+          <span>✉</span>
+          <input id="email" type="email" placeholder="kitsune_92@exemplo.com" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="senha">Senha</label>
+        <div class="input-shell">
+          <span>🔒</span>
+          <input id="senha" type="password" placeholder="••••••••" oninput="atualizarForca(this.value)" />
+          <button type="button" class="toggle-pw" onclick="const i=document.getElementById('senha'); i.type = i.type==='password' ? 'text' : 'password'; this.textContent = i.type==='password' ? 'mostrar' : 'ocultar';">mostrar</button>
+        </div>
+        <div class="pw-strength" id="pwStrength"><i></i><i></i><i></i></div>
+        <p class="pw-hint">mínimo 8 caracteres, tanto faz se você usar "123456"</p>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="confirmar">Confirmar senha</label>
+          <div class="input-shell">
+            <span>🔒</span>
+            <input id="confirmar" type="password" placeholder="••••••••" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="nasc">Nascimento</label>
+          <div class="input-shell">
+            <span>🎂</span>
+            <input id="nasc" type="date" />
+          </div>
+        </div>
+      </div>
+
+      <label class="field-check">
+        <input type="checkbox" />
+        li e finjo concordar com os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade (inexistente)</a>
+      </label>
+
+      <button type="submit" class="btn-signup">Criar conta</button>
+    </form>
+
+    <div class="divider">ou cadastre-se com</div>
+    <div class="oauth-row">
+      <button class="btn-oauth" type="button">🅶 Google</button>
+      <button class="btn-oauth" type="button">🅳 Discord</button>
+    </div>
+
+    <p class="login-hint">Já tem conta? <a href="animeko-login.html">Fazer login</a></p>
+
+    <p class="fine-print">© 2026 AnimêKo — este formulário não envia nada a lugar nenhum.<br>Nenhum dado é salvo, nenhuma conta é criada, nenhuma responsabilidade é assumida.</p>
+  </div>
+</div>
+
+<script>
+  function atualizarForca(valor){
+    const el = document.getElementById('pwStrength');
+    el.className = 'pw-strength';
+    if(valor.length === 0) return;
+    if(valor.length < 6) el.classList.add('weak');
+    else if(valor.length < 10) el.classList.add('medium');
+    else el.classList.add('strong');
+  }
+</script>
+
+</body>
+</html>
