@@ -266,10 +266,10 @@
     #lancamentos-carousel .slide-grid{grid-template-columns:1fr;}
   }
 
-  /* ---- episode list ---- */
+  /* ---- episode list (grid responsivo por breakpoint) ---- */
   .ep-list{
     display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    grid-template-columns:repeat(4,1fr);
     gap:14px;
   }
   .ep{
@@ -280,6 +280,7 @@
     border-radius:6px;
     padding:10px;
     align-items:center;
+    min-width:0;
     transition:border-color .15s;
     cursor:pointer;
   }
@@ -295,9 +296,21 @@
     overflow:hidden;
   }
   .ep-thumb.has-photo{background-color:var(--carbon);}
+  .ep-info{min-width:0; flex:1;}
   .ep h4{font-size:12px; color:var(--text); margin-bottom:4px;
-    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:160px;}
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%;}
   .ep span{font-size:10px; color:var(--amber); font-weight:700;}
+
+  @media (max-width:1100px){
+    .ep-list{grid-template-columns:repeat(3,1fr);}
+  }
+  @media (max-width:800px){
+    .ep-list{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:480px){
+    .ep-list{grid-template-columns:1fr;}
+    .ep-thumb{width:56px; height:56px;}
+  }
 
   /* ---- ranking ---- */
   .rank-list{display:flex; flex-direction:column; gap:0; position:relative; z-index:1; margin-top:6px;}
