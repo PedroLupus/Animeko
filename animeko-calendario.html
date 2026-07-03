@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Calendário — AnimêKo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="animeko-inicial.css" rel="stylesheet">
+<link href="animeko-calendario.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="ticker"><span>⚠ ISTO NÃO É UM SITE REAL — NENHUM DESTES HORÁRIOS EXISTE DE VERDADE — É SÓ UM LAYOUT HTML ⚠ &nbsp;&nbsp;&nbsp; ⚠ ISTO NÃO É UM SITE REAL — NENHUM DESTES HORÁRIOS EXISTE DE VERDADE — É SÓ UM LAYOUT HTML ⚠</span></div>
+
+<header>
+  <div class="logo"><a href="index.html">Animê<em>Ko</em></a></div>
+  <nav>
+    <a href="index.html">Animes</a>
+    <a href="animeko-categorias.html">Categorias</a>
+    <a href="animeko-calendario.html" style="color:var(--amber)">Calendário</a>
+    <a href="#">Discord</a>
+    <a href="animeko-login.html">Login|Cadastro</a>
+  </nav>
+  <div class="search-box">
+    🔍 <input type="text" placeholder="buscar anime..." />
+  </div>
+</header>
+
+<div class="cal-wrap">
+  <div class="cal-head">
+    <h1>Calendário</h1>
+    <p>Confira os animes por dia da semana e os lançamentos.</p>
+  </div>
+
+  <div class="day-tabs">
+    <button class="day-tab active" data-panel="lancamentos">
+      <span class="day-tab-label">Aba</span>
+      <span class="day-tab-name">⚡ Lançamentos</span>
+    </button>
+    <button class="day-tab" data-panel="segunda">
+      <span class="day-tab-label">Dia</span>
+      <span class="day-tab-name">📅 Segunda-feira</span>
+    </button>
+    <button class="day-tab" data-panel="terca">
+      <span class="day-tab-label">Dia</span>
+      <span class="day-tab-name">📅 Terça-feira</span>
+    </button>
+    <button class="day-tab" data-panel="quarta">
+      <span class="day-tab-label">Dia</span>
+      <span class="day-tab-name">📅 Quarta-feira</span>
+    </button>
+    <button class="day-tab" data-panel="quinta">
+      <span class="day-tab-label">Dia</span>
+      <span class="day-tab-name">📅 Quinta-feira</span>
+    </button>
+    <button class="day-tab" data-panel="sexta">
+      <span class="day-tab-label">Dia</span>
+      <span class="day-tab-name">📅 Sexta-feira</span>
+    </button>
+    <button class="day-tab" data-panel="sabado">
+      <span class="day-tab-label">Dia</span>
+      <span class="day-tab-name">📅 Sábado</span>
+    </button>
+    <button class="day-tab" data-panel="domingo">
+      <span class="day-tab-label">Dia</span>
+      <span class="day-tab-name">📅 Domingo</span>
+    </button>
+  </div>
+
+  <!-- ---- LANÇAMENTOS ---- -->
+  <div class="cal-panel active" id="panel-lancamentos">
+    <div class="cal-panel-head">
+      <h2>Lançamentos da semana</h2>
+      <span class="count">12 títulos novos, qualidade não garantida</span>
+    </div>
+    <div class="cal-grid">
+      <div class="card">
+        <div class="card-art" data-anime-query="Maou no Musume wa Yasashisugiru!"><span class="glyph">魔</span><span class="img-loading">carregando...</span></div>
+        <div class="card-body-inner"><h3>Maou no Musume wa Yasashisugiru</h3><p>Comédia Fantasia · Legendado</p></div>
+      </div>
+      <div class="card">
+        <div class="card-art" data-anime-query="Yuusha Party ni Kawaii Ko ga Ita node"><span class="glyph">勇</span><span class="img-loading">carregando...</span></div>
+        <div class="card-body-inner"><h3>Yuusha Party ni Kawaii Ko ga Ita...</h3><p>Aventura Comédia · Legendado</p></div>
+      </div>
+      <div class="card">
+        <div class="card-art" data-anime-query="Isekai no Sata wa Shachiku Shidai"><span class="glyph">社</span><span class="img-loading">carregando...</span></div>
+        <div class="card-body-inner"><h3>Isekai no Sata wa Shachiku Shidai</h3><p>Adulto Boys Love · Legendado</p></div>
+      </div>
+      <div class="card">
+        <div class="card-art" data-anime-query="Tensei shitara Dragon no Tamago Datta"><span class="glyph">竜</span><span class="img-loading">carregando...</span></div>
+        <div class="card-body-inner"><h3>Tensei shitara Dragon no Tamago...</h3><p>Ação Aventura · Legendado</p></div>
+      </div>
+      <div class="card">
+        <div class="card-art" data-anime-query="Hell Mode Yarikomizuki no Gamer"><span class="glyph">獄</span><span class="img-loading">carregando...</span></div>
+        <div class="card-body-inner"><h3>Hell Mode: Yarikomizuki n...</h3><p>Ação Aventura · Legendado</p></div>
+      </div>
+      <div class="card">
+        <div class="card-art" data-anime-query="Uruwashi no Yoi no Tsuki"><span class="glyph">月</span><span class="img-loading">carregando...</span></div>
+        <div class="card-body-inner"><h3>Uruwashi no Yoi no Tsuki</h3><p>Escolar Romance · Legendado</p></div>
+      </div>
+      <div class="card">
+        <div class="card-art" data-anime-query="Onmyou Kaiten Re:Birth Verse"><span class="glyph">陰</span><span class="img-loading">carregando...</span></div>
+        <div class="card-body-inner"><h3>Onmyou Kaiten Re:Birth Verse</h3><p>Ação Sobrenatural · Legendado</p></div>
+      </div>
+      <div class="card">
+        <div class="card-art" data-anime-query="Kijin Gentoushou"><span class="glyph">鬼</span><span class="img-loading">carregando...</span></div>
+        <div class="card-body-inner"><h3>Kijin Gentoushou</h3><p>Fantasia Isekai · Legendado</p></div>
+      </div>
+      <div class="card">
+        <div class="card-art" data-anime-query="Watari-kun no xx ga Houkai Sunzen"><span class="glyph">崩</span><span class="img-loading">carregando...</span></div>
+        <div class="card-body-inner"><h3>Watari-kun no xx ga Houkai...</h3><p>Comédia Romance · Legendado</p></div>
+      </div>
+      <div class="card">
+        <div class="card-art" data-anime-query="Ruri no Houseki"><span class="glyph">瑠</span><span class="img-loading">carregando...</span></div>
+        <div class="card-body-inner"><h3>Ruri no Houseki</h3><p>Drama Fantasia · Legendado</p></div>
+      </div>
+      <div class="card">
+        <div class="card-art" data-anime-query="Kaii to Otome to Kamikakushi"><span class="glyph">怪</span><span class="img-loading">carregando...</span></div>
+        <div class="card-body-inner"><h3>Kaii to Otome to Kamikakushi</h3><p>Sobrenatural Romance · Legendado</p></div>
+      </div>
+      <div class="card">
+        <div class="card-art" data-anime-query="Kizetsu Yuusha to Ansatsu Hime"><span class="glyph">刺</span><span class="img-loading">carregando...</span></div>
+        <div class="card-body-inner"><h3>Kizetsu Yuusha to Ansatsu Hime</h3><p>Ação Comédia · Legendado</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---- SEGUNDA ---- -->
+  <div class="cal-panel" id="panel-segunda">
+    <div class="cal-panel-head">
+      <h2>Animes de segunda-feira</h2>
+      <span class="count">6 títulos no ar</span>
+    </div>
+    <div class="cal-grid">
+      <div class="card"><div class="card-art" data-anime-query="One Piece"><span class="glyph">海</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>One Piece</h3><p>Ação Aventura · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Sousou no Frieren"><span class="glyph">葬</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Sousou no Frieren</h3><p>Fantasia Aventura · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Tensei shitara Slime Datta Ken"><span class="glyph">転</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Tensei shitara Slime Datta Ken</h3><p>Isekai Comédia · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Re Zero kara Hajimeru Isekai Seikatsu"><span class="glyph">零</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Re:Zero kara Hajimeru Isekai...</h3><p>Isekai Drama · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Bleach Sennen Kessen-hen"><span class="glyph">護</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Bleach: Sennen Kessen-hen</h3><p>Ação Sobrenatural · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Mairimashita Iruma-kun"><span class="glyph">悪</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Mairimashita! Iruma-kun</h3><p>Comédia Escolar · Dublado</p></div></div>
+    </div>
+  </div>
+
+  <!-- ---- TERÇA ---- -->
+  <div class="cal-panel" id="panel-terca">
+    <div class="cal-panel-head">
+      <h2>Animes de terça-feira</h2>
+      <span class="count">6 títulos no ar</span>
+    </div>
+    <div class="cal-grid">
+      <div class="card"><div class="card-art" data-anime-query="Jujutsu Kaisen"><span class="glyph">呪</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Jujutsu Kaisen</h3><p>Ação Sobrenatural · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Spy x Family"><span class="glyph">諜</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Spy x Family</h3><p>Comédia Ação · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Kage no Jitsuryokusha ni Naritakute"><span class="glyph">影</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Kage no Jitsuryokusha ni Naritakute!</h3><p>Ação Comédia · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Youjo Senki"><span class="glyph">幼</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Youjo Senki</h3><p>Militar Fantasia · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Honzuki no Gekokujou"><span class="glyph">本</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Honzuki no Gekokujou</h3><p>Fantasia Drama · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Yomi no Tsugai"><span class="glyph">冥</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Yomi no Tsugai</h3><p>Sobrenatural Ação · Legendado</p></div></div>
+    </div>
+  </div>
+
+  <!-- ---- QUARTA ---- -->
+  <div class="cal-panel" id="panel-quarta">
+    <div class="cal-panel-head">
+      <h2>Animes de quarta-feira</h2>
+      <span class="count">6 títulos no ar</span>
+    </div>
+    <div class="cal-grid">
+      <div class="card"><div class="card-art" data-anime-query="Kimetsu no Yaiba"><span class="glyph">鬼</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Kimetsu no Yaiba</h3><p>Ação Sobrenatural · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Chainsaw Man"><span class="glyph">鎖</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Chainsaw Man</h3><p>Ação Gore · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Mob Psycho 100"><span class="glyph">百</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Mob Psycho 100</h3><p>Sobrenatural Comédia · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Vinland Saga"><span class="glyph">戦</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Vinland Saga</h3><p>Ação História · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Made in Abyss"><span class="glyph">穴</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Made in Abyss</h3><p>Aventura Mistério · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Overlord"><span class="glyph">骨</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Overlord</h3><p>Isekai Ação · Dublado</p></div></div>
+    </div>
+  </div>
+
+  <!-- ---- QUINTA ---- -->
+  <div class="cal-panel" id="panel-quinta">
+    <div class="cal-panel-head">
+      <h2>Animes de quinta-feira</h2>
+      <span class="count">6 títulos no ar</span>
+    </div>
+    <div class="cal-grid">
+      <div class="card"><div class="card-art" data-anime-query="Shingeki no Kyojin"><span class="glyph">巨</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Shingeki no Kyojin</h3><p>Ação Drama · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Boku no Hero Academia"><span class="glyph">英</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Boku no Hero Academia</h3><p>Ação Escolar · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Dr. Stone"><span class="glyph">石</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Dr. Stone</h3><p>Aventura Sci-Fi · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Black Clover"><span class="glyph">黒</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Black Clover</h3><p>Ação Fantasia · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Fire Force"><span class="glyph">炎</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Fire Force</h3><p>Ação Sobrenatural · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Yakusoku no Neverland"><span class="glyph">約</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Yakusoku no Neverland</h3><p>Suspense Mistério · Legendado</p></div></div>
+    </div>
+  </div>
+
+  <!-- ---- SEXTA ---- -->
+  <div class="cal-panel" id="panel-sexta">
+    <div class="cal-panel-head">
+      <h2>Animes de sexta-feira</h2>
+      <span class="count">6 títulos no ar</span>
+    </div>
+    <div class="cal-grid">
+      <div class="card"><div class="card-art" data-anime-query="Naruto Shippuuden"><span class="glyph">忍</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Naruto Shippuuden</h3><p>Ação Aventura · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Fullmetal Alchemist Brotherhood"><span class="glyph">錬</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Fullmetal Alchemist: Brotherhood</h3><p>Ação Drama · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Hunter x Hunter"><span class="glyph">猟</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Hunter x Hunter</h3><p>Aventura Ação · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Death Note"><span class="glyph">死</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Death Note</h3><p>Suspense Psicológico · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Steins Gate"><span class="glyph">石</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Steins;Gate</h3><p>Sci-Fi Suspense · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Code Geass"><span class="glyph">反</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Code Geass</h3><p>Mecha Drama · Legendado</p></div></div>
+    </div>
+  </div>
+
+  <!-- ---- SÁBADO ---- -->
+  <div class="cal-panel" id="panel-sabado">
+    <div class="cal-panel-head">
+      <h2>Animes de sábado</h2>
+      <span class="count">6 títulos no ar</span>
+    </div>
+    <div class="cal-grid">
+      <div class="card"><div class="card-art" data-anime-query="Dragon Ball Super"><span class="glyph">球</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Dragon Ball Super</h3><p>Ação Aventura · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Pokemon"><span class="glyph">獣</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Pokémon</h3><p>Aventura Infantil · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Yu-Gi-Oh Duel Monsters"><span class="glyph">闇</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Yu-Gi-Oh! Duel Monsters</h3><p>Aventura Jogos · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Digimon Adventure"><span class="glyph">獣</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Digimon Adventure</h3><p>Aventura Fantasia · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="One Punch Man"><span class="glyph">拳</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>One Punch Man</h3><p>Ação Comédia · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Toriko"><span class="glyph">食</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Toriko</h3><p>Aventura Gourmet · Dublado</p></div></div>
+    </div>
+  </div>
+
+  <!-- ---- DOMINGO ---- -->
+  <div class="cal-panel" id="panel-domingo">
+    <div class="cal-panel-head">
+      <h2>Animes de domingo</h2>
+      <span class="count">6 títulos no ar</span>
+    </div>
+    <div class="cal-grid">
+      <div class="card"><div class="card-art" data-anime-query="Detective Conan"><span class="glyph">探</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Detective Conan</h3><p>Mistério Suspense · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Doraemon"><span class="glyph">猫</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Doraemon</h3><p>Comédia Infantil · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Chibi Maruko-chan"><span class="glyph">丸</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Chibi Maruko-chan</h3><p>Comédia Slice of Life · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Sazae-san"><span class="glyph">家</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Sazae-san</h3><p>Comédia Família · Legendado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Anpanman"><span class="glyph">顔</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Anpanman</h3><p>Infantil Aventura · Dublado</p></div></div>
+      <div class="card"><div class="card-art" data-anime-query="Crayon Shin-chan"><span class="glyph">尻</span><span class="img-loading">carregando...</span></div><div class="card-body-inner"><h3>Crayon Shin-chan</h3><p>Comédia Família · Dublado</p></div></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div>
+    <div class="foot-logo">AnimêKo</div>
+    <p class="legal">© 2026 AnimêKo — Site irreal que provavelmente nunca vai existir. Imagens via MyAnimeList / Jikan API. Paleta: River Styx · Carbon Fibre · Afternoon Tea · Tanned Wood · Amber Autumn.</p>
+  </div>
+  <div class="footer-links">
+    <a href="#">Política de Privacidade (inexistente)</a>
+    <a href="#">DMCA (também inexistente)</a>
+    <a href="#">Reportar bugs (tem vários)</a>
+  </div>
+</footer>
+
+<script>
+  // ---- troca de abas ----
+  const tabs = document.querySelectorAll('.day-tab');
+  const panels = document.querySelectorAll('.cal-panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('panel-' + tab.dataset.panel).classList.add('active');
+    });
+  });
+
+  // ---- busca de capas via Jikan (mesmo esquema da página inicial) ----
+  (async function loadAllImages(){
+    const cache = {};
+
+    async function fetchCover(query){
+      if(cache[query]) return cache[query];
+      try{
+        const res = await fetch('https://api.jikan.moe/v4/anime?q=' + encodeURIComponent(query) + '&limit=1');
+        const data = await res.json();
+        const img = data?.data?.[0]?.images?.jpg?.large_image_url ?? null;
+        cache[query] = img;
+        return img;
+      }catch(e){
+        console.warn('Jikan falhou para:', query, e);
+        return null;
+      }
+    }
+
+    const cards = document.querySelectorAll('.card-art[data-anime-query]');
+    for(const el of cards){
+      const q = el.getAttribute('data-anime-query');
+      const img = await fetchCover(q);
+      if(img){
+        el.style.backgroundImage = "url('" + img + "')";
+        el.classList.add('has-photo');
+      }
+      await new Promise(r => setTimeout(r, 350));
+    }
+  })();
+</script>
+</body>
+</html>

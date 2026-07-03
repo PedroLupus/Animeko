@@ -1,0 +1,119 @@
+/* ---- página de calendário (usa as mesmas variáveis do animeko-inicial.css) ---- */
+.cal-wrap{
+  padding:40px 32px 60px;
+  position:relative;
+}
+.cal-head{
+  margin-bottom:6px;
+}
+.cal-head h1{
+  font-family:'Syne', sans-serif;
+  font-weight:800;
+  font-size:26px;
+  letter-spacing:0.02em;
+  text-transform:uppercase;
+}
+.cal-head p{
+  margin-top:6px;
+  font-size:12px;
+  color:var(--text-dim);
+}
+
+/* ---- abas de dias ---- */
+.day-tabs{
+  display:grid;
+  grid-template-columns:repeat(6, 1fr);
+  gap:10px;
+  margin:26px 0 30px;
+}
+.day-tab{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:4px;
+  background:var(--carbon);
+  border:1px solid rgba(202,156,104,0.12);
+  border-radius:6px;
+  padding:11px 14px;
+  cursor:pointer;
+  font-family:'JetBrains Mono', monospace;
+  color:var(--text);
+  transition:border-color .15s, background .15s, transform .1s;
+  text-align:left;
+}
+.day-tab:hover{border-color:var(--amber); transform:translateY(-2px);}
+.day-tab-label{
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  color:var(--text-dim);
+  font-weight:700;
+}
+.day-tab-name{
+  font-size:13px;
+  font-weight:700;
+  color:var(--text);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width:100%;
+}
+.day-tab.active{
+  background:var(--amber);
+  border-color:var(--amber);
+}
+.day-tab.active .day-tab-label{color:rgba(19,25,31,0.65);}
+.day-tab.active .day-tab-name{color:var(--styx);}
+
+@media (max-width:1100px){
+  .day-tabs{grid-template-columns:repeat(4, 1fr);}
+}
+@media (max-width:700px){
+  .day-tabs{grid-template-columns:repeat(3, 1fr);}
+}
+@media (max-width:480px){
+  .day-tabs{grid-template-columns:repeat(2, 1fr);}
+}
+
+/* ---- painel do dia selecionado ---- */
+.cal-panel{display:none;}
+.cal-panel.active{display:block;}
+.cal-panel-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  margin-bottom:18px;
+  border-bottom:1px solid rgba(202,156,104,0.15);
+  padding-bottom:12px;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.cal-panel-head h2{
+  font-family:'Syne', sans-serif;
+  font-weight:700;
+  font-size:19px;
+}
+.cal-panel-head .count{font-size:11px; color:var(--text-dim); letter-spacing:0.04em;}
+
+.cal-grid{
+  display:grid;
+  grid-template-columns:repeat(6, 1fr);
+  gap:16px;
+}
+.cal-grid .card-body-inner p{
+  color:var(--text-dim);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+@media (max-width:1200px){
+  .cal-grid{grid-template-columns:repeat(4, 1fr);}
+}
+@media (max-width:800px){
+  .cal-grid{grid-template-columns:repeat(3, 1fr);}
+}
+@media (max-width:560px){
+  .cal-grid{grid-template-columns:repeat(2, 1fr);}
+  .cal-wrap{padding:28px 16px 40px;}
+}
