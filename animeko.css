@@ -1,6 +1,6 @@
 /* =============================================================
    AnimêKo — CSS unificado
-   Contém: base/inicial + login + cadastro/signup + calendário + categorias
+   Contém: base/inicial + login + cadastro/signup + calendário + categorias + lista de animes
    ============================================================= */
 
 /* ---------------------------------------------------------------
@@ -14,12 +14,15 @@
     --amber:#CA9C68;
     --text:#EDE2D0;
     --text-dim:#9C8F7C;
+    --font-mono:'JetBrains Mono', monospace;
+    --font-syne:'Syne', sans-serif;
+    --border:rgba(202,156,104,0.15);
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   body{
     background:var(--styx);
     color:var(--text);
-    font-family:'JetBrains Mono', monospace;
+    font-family:var(--font-mono);
     line-height:1.5;
     background-image:
       radial-gradient(circle at 15% 0%, rgba(144,109,75,0.12), transparent 40%),
@@ -48,12 +51,12 @@
     display:flex;
     align-items:center;
     padding:18px 32px;
-    border-bottom:1px solid rgba(202,156,104,0.15);
+    border-bottom:1px solid var(--border);
     gap:28px;
     flex-wrap:wrap;
   }
   .logo{
-    font-family:'Syne', sans-serif;
+    font-family:var(--font-syne);
     font-weight:800;
     font-size:26px;
     letter-spacing:-0.02em;
@@ -89,7 +92,7 @@
     border:none;
     outline:none;
     color:var(--text);
-    font-family:'JetBrains Mono', monospace;
+    font-family:var(--font-mono);
     font-size:12px;
     width:100%;
   }
@@ -109,7 +112,7 @@
     font-weight:700;
   }
   h1.hero-title{
-    font-family:'Syne', sans-serif;
+    font-family:var(--font-syne);
     font-weight:800;
     font-size:clamp(34px,6vw,64px);
     letter-spacing:-0.03em;
@@ -136,24 +139,25 @@
 
   /* ---- sections ---- */
   section{padding:48px 32px;}
-  .section-head{
+  /* .cat-head (página de categorias) reaproveita este mesmo padrão de cabeçalho */
+  .section-head,.cat-head{
     display:flex;
     align-items:baseline;
     justify-content:space-between;
     margin-bottom:24px;
-    border-bottom:1px solid rgba(202,156,104,0.15);
+    border-bottom:1px solid var(--border);
     padding-bottom:14px;
     flex-wrap:wrap;
     gap:10px;
   }
   .section-head h2{
-    font-family:'Syne', sans-serif;
+    font-family:var(--font-syne);
     font-weight:700;
     font-size:24px;
     line-height:1.2;
     letter-spacing:-0.01em;
   }
-  .section-head .count{font-size:11px; color:var(--text-dim); letter-spacing:0.05em;}
+  .section-head .count,.cat-head .count{font-size:11px; color:var(--text-dim); letter-spacing:0.05em;}
   .section-head{position:relative; z-index:2;}
 
   /* ---- carousel cards ---- */
@@ -184,7 +188,7 @@
     pointer-events:none;
   }
   .card-art .glyph{
-    font-family:'Syne', sans-serif;
+    font-family:var(--font-syne);
     font-weight:800;
     font-size:48px;
     color:rgba(19,25,31,0.25);
@@ -215,11 +219,11 @@
     border-radius:3px;
     letter-spacing:0.04em;
     z-index:2;
-    font-family:'JetBrains Mono',monospace;
+    font-family:var(--font-mono);
   }
   .card-body-inner{padding:12px 12px 14px;}
   .card-body-inner h3{
-    font-family:'Syne', sans-serif;
+    font-family:var(--font-syne);
     font-size:13px;
     font-weight:700;
     margin-bottom:5px;
@@ -328,7 +332,7 @@
     border-bottom:1px solid rgba(202,156,104,0.08);
   }
   .rank-num{
-    font-family:'Syne', sans-serif;
+    font-family:var(--font-syne);
     font-weight:800; font-size:34px;
     line-height:1;
     width:50px;
@@ -364,7 +368,7 @@
     align-items:stretch;
   }
   .chat-card-info{flex:1 1 220px; min-width:200px; display:flex; flex-direction:column;}
-  .chat-card h5{font-family:'Syne',sans-serif; font-size:13px; margin-bottom:10px; color:var(--amber);}
+  .chat-card h5{font-family:var(--font-syne); font-size:13px; margin-bottom:10px; color:var(--amber);}
   .chat-card p{font-size:12px; color:var(--text-dim); margin-bottom:14px;}
   .chat-btns{display:flex; gap:10px; margin-top:auto;}
 
@@ -374,7 +378,7 @@
     min-width:240px;
     max-width:640px;
     background:var(--styx);
-    border:1px solid rgba(202,156,104,0.15);
+    border:1px solid var(--border);
     border-radius:8px;
     display:flex;
     flex-direction:column;
@@ -412,7 +416,7 @@
     border-radius:50%;
     flex-shrink:0;
     display:flex; align-items:center; justify-content:center;
-    font-family:'Syne', sans-serif;
+    font-family:var(--font-syne);
     font-size:10px; font-weight:800;
     color:var(--styx);
   }
@@ -435,7 +439,7 @@
   .chat-input-fake{
     flex:1;
     background:var(--carbon);
-    border:1px solid rgba(202,156,104,0.15);
+    border:1px solid var(--border);
     border-radius:4px;
     padding:7px 10px;
     font-size:11px;
@@ -455,20 +459,20 @@
     .chat-window{max-width:100%;}
   }
   .btn-af{
-    font-family:'JetBrains Mono', monospace;
+    font-family:var(--font-mono);
     font-size:11px; font-weight:700;
     padding:9px 16px; border-radius:4px; cursor:pointer;
   }
   .btn-primary-af{background:var(--amber); color:var(--styx); border:none;}
   .btn-ghost-af{background:transparent; color:var(--text-dim); border:1px solid var(--wood);}
   footer{
-    border-top:1px solid rgba(202,156,104,0.15);
+    border-top:1px solid var(--border);
     padding:36px 32px;
     display:flex; justify-content:space-between;
     flex-wrap:wrap; gap:20px;
     font-size:11px; color:var(--text-dim);
   }
-  footer .foot-logo{font-family:'Syne',sans-serif; font-weight:800; color:var(--amber); font-size:18px; margin-bottom:8px;}
+  footer .foot-logo{font-family:var(--font-syne); font-weight:800; color:var(--amber); font-size:18px; margin-bottom:8px;}
   .footer-links{display:flex; gap:16px; flex-wrap:wrap;}
   .footer-links a:hover{color:var(--amber);}
 
@@ -481,10 +485,11 @@
   }
 
 /* ---------------------------------------------------------------
-   2. LOGIN (ex: animeko-login.css)
+   2/3. AUTENTICAÇÃO — LOGIN + CADASTRO (compartilhado)
+   ex: animeko-login.css + animeko-signup.css, unificados por serem
+   estruturalmente idênticos (mesmo card, campos, botões e rodapé).
    --------------------------------------------------------------- */
-/* ---- página de login (usa as mesmas variáveis do animeko-inicial.css) ---- */
-.login-wrap{
+.login-wrap,.signup-wrap{
   min-height:calc(100vh - 41px);
   display:flex;
   align-items:center;
@@ -493,7 +498,7 @@
   position:relative;
   overflow:hidden;
 }
-.login-wrap::before{
+.login-wrap::before,.signup-wrap::before{
   content:"";
   position:absolute;
   inset:0;
@@ -502,213 +507,35 @@
     radial-gradient(circle at 80% 80%, rgba(144,109,75,0.10), transparent 45%);
   pointer-events:none;
 }
-.login-card{
+.login-card,.signup-card{
   position:relative;
   z-index:1;
   width:100%;
-  max-width:380px;
   background:var(--carbon);
-  border:1px solid rgba(202,156,104,0.15);
+  border:1px solid var(--border);
   border-radius:10px;
   padding:34px 32px 28px;
   box-shadow:0 20px 60px rgba(0,0,0,0.35);
 }
-.login-logo{
-  font-family:'Syne', sans-serif;
+.login-card{max-width:380px;}
+.signup-card{max-width:420px;}
+.login-logo,.signup-logo{
+  font-family:var(--font-syne);
   font-weight:800;
   font-size:24px;
   text-align:center;
   margin-bottom:4px;
 }
-.login-logo em{font-style:normal; color:var(--amber);}
-.login-sub{
+.login-logo em,.signup-logo em{font-style:normal; color:var(--amber);}
+.login-sub,.signup-sub{
   text-align:center;
   font-size:11px;
   color:var(--text-dim);
   letter-spacing:0.04em;
   margin-bottom:26px;
 }
-.field{margin-bottom:16px;}
-.field label{
-  display:block;
-  font-size:11px;
-  color:var(--wood);
-  text-transform:uppercase;
-  letter-spacing:0.06em;
-  font-weight:700;
-  margin-bottom:6px;
-}
-.field .input-shell{
-  display:flex;
-  align-items:center;
-  gap:8px;
-  background:var(--styx);
-  border:1px solid rgba(202,156,104,0.2);
-  border-radius:5px;
-  padding:11px 13px;
-  transition:border-color .15s;
-}
-.field .input-shell:focus-within{border-color:var(--amber);}
-.field .input-shell span{font-size:13px; color:var(--text-dim); flex-shrink:0;}
-.field input{
-  background:none;
-  border:none;
-  outline:none;
-  color:var(--text);
-  font-family:'JetBrains Mono', monospace;
-  font-size:13px;
-  width:100%;
-}
-.field input::placeholder{color:var(--text-dim);}
-.toggle-pw{
-  background:none;
-  border:none;
-  color:var(--text-dim);
-  font-size:11px;
-  cursor:pointer;
-  font-family:'JetBrains Mono', monospace;
-  flex-shrink:0;
-}
-.toggle-pw:hover{color:var(--amber);}
-.row-between{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  font-size:11px;
-  margin:4px 0 22px;
-}
-.remember{
-  display:flex;
-  align-items:center;
-  gap:7px;
-  color:var(--text-dim);
-  cursor:pointer;
-}
-.remember input{accent-color:var(--amber); width:13px; height:13px;}
-.forgot{color:var(--amber);}
-.forgot:hover{text-decoration:underline;}
-.btn-login{
-  width:100%;
-  background:var(--amber);
-  color:var(--styx);
-  border:none;
-  font-family:'JetBrains Mono', monospace;
-  font-weight:700;
-  font-size:13px;
-  padding:13px;
-  border-radius:5px;
-  cursor:pointer;
-  letter-spacing:0.02em;
-  transition:filter .15s, transform .1s;
-}
-.btn-login:hover{filter:brightness(1.08);}
-.btn-login:active{transform:scale(0.99);}
-.divider{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin:22px 0;
-  font-size:10px;
-  color:var(--text-dim);
-  text-transform:uppercase;
-  letter-spacing:0.06em;
-}
-.divider::before,.divider::after{
-  content:"";
-  flex:1;
-  height:1px;
-  background:rgba(202,156,104,0.15);
-}
-.oauth-row{display:flex; gap:10px; margin-bottom:22px;}
-.btn-oauth{
-  flex:1;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  background:var(--styx);
-  border:1px solid rgba(202,156,104,0.18);
-  color:var(--text-dim);
-  font-family:'JetBrains Mono', monospace;
-  font-size:11px;
-  font-weight:600;
-  padding:10px;
-  border-radius:5px;
-  cursor:pointer;
-  transition:border-color .15s, color .15s;
-}
-.btn-oauth:hover{border-color:var(--amber); color:var(--amber);}
-.signup-hint{
-  text-align:center;
-  font-size:12px;
-  color:var(--text-dim);
-}
-.signup-hint a{color:var(--amber); font-weight:700;}
-.signup-hint a:hover{text-decoration:underline;}
-.fine-print{
-  text-align:center;
-  font-size:10px;
-  color:var(--text-dim);
-  opacity:0.6;
-  margin-top:22px;
-  line-height:1.5;
-}
-.back-home{
-  display:inline-block;
-  margin-bottom:18px;
-  font-size:11px;
-  color:var(--text-dim);
-}
-.back-home:hover{color:var(--amber);}
 
-/* ---------------------------------------------------------------
-   3. CADASTRO / SIGNUP (ex: animeko-signup.css)
-   --------------------------------------------------------------- */
-/* ---- página de cadastro (usa as mesmas variáveis do animeko-inicial.css) ---- */
-.signup-wrap{
-  min-height:calc(100vh - 41px);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:48px 20px;
-  position:relative;
-  overflow:hidden;
-}
-.signup-wrap::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(202,156,104,0.10), transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(144,109,75,0.10), transparent 45%);
-  pointer-events:none;
-}
-.signup-card{
-  position:relative;
-  z-index:1;
-  width:100%;
-  max-width:420px;
-  background:var(--carbon);
-  border:1px solid rgba(202,156,104,0.15);
-  border-radius:10px;
-  padding:34px 32px 28px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.35);
-}
-.signup-logo{
-  font-family:'Syne', sans-serif;
-  font-weight:800;
-  font-size:24px;
-  text-align:center;
-  margin-bottom:4px;
-}
-.signup-logo em{font-style:normal; color:var(--amber);}
-.signup-sub{
-  text-align:center;
-  font-size:11px;
-  color:var(--text-dim);
-  letter-spacing:0.04em;
-  margin-bottom:26px;
-}
+/* ---- campos de formulário ---- */
 .field{margin-bottom:16px;}
 .field-row{display:flex; gap:12px;}
 .field-row .field{flex:1; min-width:0;}
@@ -738,7 +565,7 @@
   border:none;
   outline:none;
   color:var(--text);
-  font-family:'JetBrains Mono', monospace;
+  font-family:var(--font-mono);
   font-size:13px;
   width:100%;
   min-width:0;
@@ -750,12 +577,31 @@
   color:var(--text-dim);
   font-size:11px;
   cursor:pointer;
-  font-family:'JetBrains Mono', monospace;
+  font-family:var(--font-mono);
   flex-shrink:0;
 }
 .toggle-pw:hover{color:var(--amber);}
 
-/* ---- medidor de força de senha (decorativo) ---- */
+/* ---- somente login: lembrar-me / esqueci a senha ---- */
+.row-between{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:11px;
+  margin:4px 0 22px;
+}
+.remember{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  color:var(--text-dim);
+  cursor:pointer;
+}
+.remember input{accent-color:var(--amber); width:13px; height:13px;}
+.forgot{color:var(--amber);}
+.forgot:hover{text-decoration:underline;}
+
+/* ---- somente cadastro: medidor de força de senha (decorativo) ---- */
 .pw-strength{
   display:flex;
   gap:4px;
@@ -765,7 +611,7 @@
   flex:1;
   height:3px;
   border-radius:2px;
-  background:rgba(202,156,104,0.15);
+  background:var(--border);
 }
 .pw-strength.weak i:nth-child(1){background:#c96a4f;}
 .pw-strength.medium i:nth-child(1),
@@ -787,12 +633,13 @@
 .field-check a{color:var(--amber);}
 .field-check a:hover{text-decoration:underline;}
 
-.btn-signup{
+/* ---- botão principal (login/cadastro) ---- */
+.btn-login,.btn-signup{
   width:100%;
   background:var(--amber);
   color:var(--styx);
   border:none;
-  font-family:'JetBrains Mono', monospace;
+  font-family:var(--font-mono);
   font-weight:700;
   font-size:13px;
   padding:13px;
@@ -801,9 +648,10 @@
   letter-spacing:0.02em;
   transition:filter .15s, transform .1s;
 }
-.btn-signup:hover{filter:brightness(1.08);}
-.btn-signup:active{transform:scale(0.99);}
+.btn-login:hover,.btn-signup:hover{filter:brightness(1.08);}
+.btn-login:active,.btn-signup:active{transform:scale(0.99);}
 
+/* ---- divisor "ou continue com" + oauth ---- */
 .divider{
   display:flex;
   align-items:center;
@@ -818,7 +666,7 @@
   content:"";
   flex:1;
   height:1px;
-  background:rgba(202,156,104,0.15);
+  background:var(--border);
 }
 .oauth-row{display:flex; gap:10px; margin-bottom:22px;}
 .btn-oauth{
@@ -830,7 +678,7 @@
   background:var(--styx);
   border:1px solid rgba(202,156,104,0.18);
   color:var(--text-dim);
-  font-family:'JetBrains Mono', monospace;
+  font-family:var(--font-mono);
   font-size:11px;
   font-weight:600;
   padding:10px;
@@ -840,14 +688,14 @@
 }
 .btn-oauth:hover{border-color:var(--amber); color:var(--amber);}
 
-.login-hint{
+/* ---- rodapé do card (link cruzado + aviso) ---- */
+.signup-hint,.login-hint{
   text-align:center;
   font-size:12px;
   color:var(--text-dim);
 }
-.login-hint a{color:var(--amber); font-weight:700;}
-.login-hint a:hover{text-decoration:underline;}
-
+.signup-hint a,.login-hint a{color:var(--amber); font-weight:700;}
+.signup-hint a:hover,.login-hint a:hover{text-decoration:underline;}
 .fine-print{
   text-align:center;
   font-size:10px;
@@ -873,15 +721,11 @@
    4. CALENDÁRIO (ex: animeko-calendario.css)
    --------------------------------------------------------------- */
 /* ---- página de calendário (usa as mesmas variáveis do animeko-inicial.css) ---- */
-.cal-wrap{
-  padding:40px 32px 60px;
-  position:relative;
-}
 .cal-head{
   margin-bottom:6px;
 }
 .cal-head h1{
-  font-family:'Syne', sans-serif;
+  font-family:var(--font-syne);
   font-weight:800;
   font-size:26px;
   letter-spacing:0.02em;
@@ -910,7 +754,7 @@
   border-radius:6px;
   padding:11px 14px;
   cursor:pointer;
-  font-family:'JetBrains Mono', monospace;
+  font-family:var(--font-mono);
   color:var(--text);
   transition:border-color .15s, background .15s, transform .1s;
   text-align:left;
@@ -957,13 +801,13 @@
   align-items:baseline;
   justify-content:space-between;
   margin-bottom:18px;
-  border-bottom:1px solid rgba(202,156,104,0.15);
+  border-bottom:1px solid var(--border);
   padding-bottom:12px;
   flex-wrap:wrap;
   gap:8px;
 }
 .cal-panel-head h2{
-  font-family:'Syne', sans-serif;
+  font-family:var(--font-syne);
   font-weight:700;
   font-size:19px;
 }
@@ -981,37 +825,12 @@
   text-overflow:ellipsis;
 }
 
-@media (max-width:1200px){
-  .cal-grid{grid-template-columns:repeat(4, 1fr);}
-}
-@media (max-width:800px){
-  .cal-grid{grid-template-columns:repeat(3, 1fr);}
-}
-@media (max-width:560px){
-  .cal-grid{grid-template-columns:repeat(2, 1fr);}
-  .cal-wrap{padding:28px 16px 40px;}
-}
-
 /* ---------------------------------------------------------------
    5. CATEGORIAS (ex: animeko-categorias.css)
    --------------------------------------------------------------- */
-/* ---- página de categorias (usa as mesmas variáveis do animeko-inicial.css) ---- */
-.cat-wrap{
-  padding:40px 32px 60px;
-  position:relative;
-}
-.cat-head{
-  display:flex;
-  align-items:baseline;
-  justify-content:space-between;
-  margin-bottom:24px;
-  border-bottom:1px solid rgba(202,156,104,0.15);
-  padding-bottom:14px;
-  flex-wrap:wrap;
-  gap:10px;
-}
+/* ---- página de categorias (o cabeçalho reaproveita .section-head, ver seção 1) ---- */
 .cat-head h1{
-  font-family:'Syne', sans-serif;
+  font-family:var(--font-syne);
   font-weight:800;
   font-size:22px;
   letter-spacing:0.02em;
@@ -1019,14 +838,6 @@
   position:relative;
   padding-bottom:10px;
 }
-.cat-head h1::after{
-  content:"";
-  position:absolute;
-  left:0; bottom:0;
-  width:64px; height:2px;
-  background:var(--amber);
-}
-.cat-head .count{font-size:11px; color:var(--text-dim); letter-spacing:0.05em;}
 
 .cat-grid{
   display:grid;
@@ -1054,7 +865,7 @@
   display:flex;
   align-items:center;
   gap:7px;
-  font-family:'Syne', sans-serif;
+  font-family:var(--font-syne);
   font-weight:700;
   font-size:14px;
   color:var(--text);
@@ -1069,13 +880,198 @@
   color:var(--wood);
 }
 
+/* ---------------------------------------------------------------
+   6. LISTA DE ANIMES (ex: animeko-lista.css)
+   --------------------------------------------------------------- */
+.list-head{
+  margin-bottom:24px;
+  padding-bottom:14px;
+  border-bottom:1px solid var(--border);
+}
+.list-head h1{
+  font-family:var(--font-syne);
+  font-weight:800;
+  font-size:24px;
+  letter-spacing:0.03em;
+  text-transform:uppercase;
+  position:relative;
+  padding-bottom:12px;
+  display:inline-block;
+}
+.cat-head h1::after,.list-head h1::after{
+  content:"";
+  position:absolute;
+  left:0; bottom:0;
+  width:64px; height:2px;
+  background:var(--amber);
+}
+
+/* ---- barra de filtros ---- */
+.filter-bar{
+  display:grid;
+  grid-template-columns:repeat(6, 1fr);
+  gap:14px;
+  margin-bottom:20px;
+}
+.filter-item{
+  background:var(--carbon);
+  border:1px solid var(--border);
+  border-radius:6px;
+  padding:10px 14px;
+  transition:border-color .15s;
+}
+.filter-item:focus-within{border-color:var(--amber);}
+.filter-item label{
+  display:block;
+  font-size:10px;
+  color:var(--text-dim);
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  margin-bottom:4px;
+}
+.filter-item select{
+  width:100%;
+  background:none;
+  border:none;
+  outline:none;
+  color:var(--text);
+  font-family:var(--font-mono);
+  font-weight:700;
+  font-size:13px;
+  cursor:pointer;
+}
+.filter-item select option{background:var(--carbon); color:var(--text);}
+
+.btn-apply{
+  background:var(--amber);
+  color:var(--styx);
+  border:none;
+  font-family:var(--font-mono);
+  font-weight:700;
+  font-size:12px;
+  padding:11px 24px;
+  border-radius:5px;
+  cursor:pointer;
+  letter-spacing:0.02em;
+  transition:filter .15s, transform .1s;
+  margin-bottom:28px;
+}
+.btn-apply:hover{filter:brightness(1.08);}
+.btn-apply:active{transform:scale(0.98);}
+
+/* ---- barra de letras ---- */
+.letters-bar{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:32px;
+}
+.letters-label{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  background:var(--carbon);
+  border:1px solid rgba(202,156,104,0.12);
+  border-radius:5px;
+  padding:8px 14px;
+  font-size:11px;
+  font-weight:700;
+  color:var(--text-dim);
+  margin-right:6px;
+}
+.letter-btn{
+  background:var(--carbon);
+  border:1px solid rgba(202,156,104,0.12);
+  border-radius:5px;
+  color:var(--text-dim);
+  font-family:var(--font-mono);
+  font-size:11px;
+  font-weight:700;
+  padding:8px 13px;
+  cursor:pointer;
+  transition:border-color .15s, color .15s, background .15s;
+}
+.letter-btn:hover{border-color:var(--amber); color:var(--amber);}
+.letter-btn.active{
+  background:var(--amber);
+  border-color:var(--amber);
+  color:var(--styx);
+}
+
+/* ---- grid de animes ---- */
+.list-grid{
+  display:grid;
+  grid-template-columns:repeat(6, 1fr);
+  gap:18px;
+  margin-bottom:36px;
+}
+.list-grid .card-body-inner p{
+  color:var(--text-dim);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* ---- paginação ---- */
+.pagination-bar{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+.page-btn{
+  min-width:38px;
+  height:38px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--carbon);
+  border:1px solid var(--border);
+  border-radius:5px;
+  color:var(--text-dim);
+  font-family:var(--font-mono);
+  font-size:12px;
+  font-weight:700;
+  cursor:pointer;
+  transition:border-color .15s, color .15s, background .15s;
+  padding:0 10px;
+}
+.page-btn:hover{border-color:var(--amber); color:var(--amber);}
+.page-btn.active{
+  background:var(--amber);
+  border-color:var(--amber);
+  color:var(--styx);
+}
+.page-dots{
+  color:var(--text-dim);
+  font-size:12px;
+  padding:0 4px;
+}
+
+/* ---------------------------------------------------------------
+   7. WRAPPERS + GRIDS RESPONSIVOS (compartilhado)
+   Calendário, Categorias e Lista usam o mesmíssimo padding de página
+   e o mesmíssimo padrão de colunas (6 → 4 → 3 → 2), então os
+   breakpoints ficam unificados aqui em vez de repetidos 3x.
+   --------------------------------------------------------------- */
+.cal-wrap,.cat-wrap,.list-wrap{
+  padding:40px 32px 60px;
+  position:relative;
+}
+
 @media (max-width:1200px){
-  .cat-grid{grid-template-columns:repeat(4, 1fr);}
+  .cal-grid,.cat-grid,.list-grid{grid-template-columns:repeat(4, 1fr);}
+  .filter-bar{grid-template-columns:repeat(3, 1fr);}
 }
 @media (max-width:800px){
-  .cat-grid{grid-template-columns:repeat(3, 1fr);}
+  .cal-grid,.cat-grid,.list-grid{grid-template-columns:repeat(3, 1fr);}
+  .filter-bar{grid-template-columns:repeat(2, 1fr);}
 }
 @media (max-width:560px){
-  .cat-grid{grid-template-columns:repeat(2, 1fr);}
-  .cat-wrap{padding:28px 16px 40px;}
+  .cal-grid,.cat-grid,.list-grid{grid-template-columns:repeat(2, 1fr);}
+  .filter-bar{grid-template-columns:1fr;}
+  .cal-wrap,.cat-wrap,.list-wrap{padding:28px 16px 40px;}
 }

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Lista de Animes — AnimêKo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="animeko.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="ticker"><span>⚠ ISTO NÃO É UM SITE REAL — NENHUM FILTRO AQUI FILTRA NADA — É SÓ UM LAYOUT HTML ⚠ &nbsp;&nbsp;&nbsp; ⚠ ISTO NÃO É UM SITE REAL — NENHUM FILTRO AQUI FILTRA NADA — É SÓ UM LAYOUT HTML ⚠</span></div>
+
+<header>
+  <div class="logo"><a href="index.html">Animê<em>Ko</em></a></div>
+  <nav>
+    <a href="animeko-lista.html" style="color:var(--amber)">Animes</a>
+    <a href="animeko-categorias.html">Categorias</a>
+    <a href="animeko-calendario.html">Calendário</a>
+    <a href="#">Discord</a>
+    <a href="animeko-login.html">Login|Cadastro</a>
+  </nav>
+  <div class="search-box">
+    🔍 <input type="text" placeholder="buscar anime..." />
+  </div>
+</header>
+
+<div class="list-wrap">
+  <div class="list-head">
+    <h1>Lista de animes</h1>
+  </div>
+
+  <div class="filter-bar">
+    <div class="filter-item">
+      <label>Categoria</label>
+      <select>
+        <option>Todas</option>
+        <option>Ação</option>
+        <option>Aventura</option>
+        <option>Comédia</option>
+        <option>Drama</option>
+        <option>Fantasia</option>
+        <option>Romance</option>
+      </select>
+    </div>
+    <div class="filter-item">
+      <label>Qualidade</label>
+      <select>
+        <option>Qualidade</option>
+        <option>HD</option>
+        <option>Full HD</option>
+        <option>SD</option>
+      </select>
+    </div>
+    <div class="filter-item">
+      <label>Ano de Lançamento</label>
+      <select>
+        <option>Todos</option>
+        <option>2026</option>
+        <option>2025</option>
+        <option>2024</option>
+        <option>2023</option>
+      </select>
+    </div>
+    <div class="filter-item">
+      <label>Ordenar por</label>
+      <select>
+        <option>Mais recentes</option>
+        <option>Mais antigos</option>
+        <option>Ordem alfabética (A-Z)</option>
+        <option>Ordem alfabética (Z-A)</option>
+        <option>Mais populares</option>
+      </select>
+    </div>
+    <div class="filter-item">
+      <label>Idioma</label>
+      <select>
+        <option>Todos</option>
+        <option>Legendado</option>
+        <option>Dublado</option>
+      </select>
+    </div>
+    <div class="filter-item">
+      <label>Status</label>
+      <select>
+        <option>Todos</option>
+        <option>Em lançamento</option>
+        <option>Completo</option>
+      </select>
+    </div>
+  </div>
+
+  <button class="btn-apply" type="button">Aplicar</button>
+
+  <div class="letters-bar">
+    <span class="letters-label">🗂 Letras</span>
+    <button class="letter-btn active" data-letter="all">All</button>
+    <button class="letter-btn" data-letter="0-9">0-9</button>
+    <button class="letter-btn" data-letter="a">A</button>
+    <button class="letter-btn" data-letter="b">B</button>
+    <button class="letter-btn" data-letter="c">C</button>
+    <button class="letter-btn" data-letter="d">D</button>
+    <button class="letter-btn" data-letter="e">E</button>
+    <button class="letter-btn" data-letter="f">F</button>
+    <button class="letter-btn" data-letter="g">G</button>
+    <button class="letter-btn" data-letter="h">H</button>
+    <button class="letter-btn" data-letter="i">I</button>
+    <button class="letter-btn" data-letter="j">J</button>
+    <button class="letter-btn" data-letter="k">K</button>
+    <button class="letter-btn" data-letter="l">L</button>
+    <button class="letter-btn" data-letter="m">M</button>
+    <button class="letter-btn" data-letter="n">N</button>
+    <button class="letter-btn" data-letter="o">O</button>
+    <button class="letter-btn" data-letter="p">P</button>
+    <button class="letter-btn" data-letter="q">Q</button>
+    <button class="letter-btn" data-letter="r">R</button>
+    <button class="letter-btn" data-letter="s">S</button>
+    <button class="letter-btn" data-letter="t">T</button>
+    <button class="letter-btn" data-letter="u">U</button>
+    <button class="letter-btn" data-letter="v">V</button>
+    <button class="letter-btn" data-letter="w">W</button>
+    <button class="letter-btn" data-letter="x">X</button>
+    <button class="letter-btn" data-letter="y">Y</button>
+    <button class="letter-btn" data-letter="z">Z</button>
+  </div>
+
+  <div class="list-grid">
+
+    <div class="card">
+      <div class="card-art" data-anime-query="Tonari no Kaibutsu-kun"><span class="glyph">怪</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Tonari no Kaibutsu-kun</h3><p>Comédia Escolar - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Tokyo Ravens"><span class="glyph">鴉</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Tokyo Ravens</h3><p>Ação Escolar - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Toaru Hikuushi e no Koiuta"><span class="glyph">恋</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Toaru Hikuushi e no Koiuta</h3><p>Aventura Drama - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="To LOVE-Ru"><span class="glyph">愛</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>To LOVE-Ru</h3><p>Comédia Ecchi - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Tenjou Tenge"><span class="glyph">天</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Tenjou Tenge</h3><p>Ação Artes Marciais - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Tengen Toppa Gurren Lagann"><span class="glyph">螺</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Tengen Toppa Gurren Lag...</h3><p>Aventura Mecha - Legendado</p></div>
+    </div>
+
+    <div class="card">
+      <div class="card-art" data-anime-query="Nanatsu no Taizai"><span class="glyph">罪</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Nanatsu no Taizai</h3><p>Ação Aventura - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Tokyo Ghoul re 2nd Season"><span class="glyph">喰</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Tokyo Ghoul:re 2nd Season</h3><p>Ação Fantasia - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Tokyo Ghoul re"><span class="glyph">喰</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Tokyo Ghoul:re</h3><p>Ação Fantasia - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Tokyo Ghoul Root A"><span class="glyph">喰</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Tokyo Ghoul √A</h3><p>Ação Fantasia - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Tokyo Ghoul"><span class="glyph">喰</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Tokyo Ghoul</h3><p>Ação Fantasia - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Tensei shitara Slime Datta Ken"><span class="glyph">転</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Tensei shitara Slime Datta...</h3><p>Ação Comédia - Legendado</p></div>
+    </div>
+
+    <div class="card">
+      <div class="card-art" data-anime-query="Tate no Yuusha no Nariagari"><span class="glyph">盾</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Tate no Yuusha no Nariag...</h3><p>Ação Aventura - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Sword Art Online II"><span class="glyph">刀</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Sword Art Online II</h3><p>Ação Aventura - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Sword Art Online"><span class="glyph">刀</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Sword Art Online</h3><p>Ação Aventura - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Mushoku Tensei Isekai Ittara Honki Dasu"><span class="glyph">無</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Mushoku Tensei: Isekai Itt...</h3><p>Aventura Drama - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Cowboy Bebop"><span class="glyph">牛</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Cowboy Bebop</h3><p>Ação Adulto - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Conception"><span class="glyph">姫</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Conception</h3><p>Ação Comédia - Legendado</p></div>
+    </div>
+
+    <div class="card">
+      <div class="card-art" data-anime-query="Fullmetal Alchemist Brotherhood"><span class="glyph">錬</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Fullmetal Alchemist: Broth...</h3><p>Ação Aventura - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Death Note"><span class="glyph">死</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Death Note</h3><p>Mistério Psicológico - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Steins Gate"><span class="glyph">石</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Steins;Gate</h3><p>Sci-Fi Suspense - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Code Geass Hangyaku no Lelouch"><span class="glyph">反</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Code Geass</h3><p>Ação Mecha - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Shingeki no Kyojin"><span class="glyph">巨</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Shingeki no Kyojin</h3><p>Ação Drama - Legendado</p></div>
+    </div>
+    <div class="card">
+      <div class="card-art" data-anime-query="Boku no Hero Academia"><span class="glyph">英</span><span class="img-loading">carregando...</span></div>
+      <div class="card-body-inner"><h3>Boku no Hero Academia</h3><p>Ação Super Poder - Legendado</p></div>
+    </div>
+
+  </div>
+
+  <div class="pagination-bar">
+    <button class="page-btn active">1</button>
+    <button class="page-btn">2</button>
+    <button class="page-btn">3</button>
+    <span class="page-dots">...</span>
+    <button class="page-btn">10</button>
+    <button class="page-btn">»</button>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div class="foot-logo">AnimêKo</div>
+    <p class="legal">© 2026 AnimêKo — Site irreal que provavelmente nunca vai existir. Imagens via MyAnimeList / Jikan API. Paleta: River Styx · Carbon Fibre · Afternoon Tea · Tanned Wood · Amber Autumn.</p>
+  </div>
+  <div class="footer-links">
+    <a href="#">Política de Privacidade (inexistente)</a>
+    <a href="#">DMCA (também inexistente)</a>
+    <a href="#">Reportar bugs (tem vários)</a>
+  </div>
+</footer>
+
+<script>
+  // ---- letras: apenas efeito visual, não filtra nada de verdade ----
+  document.querySelectorAll('.letter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.letter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // ---- paginação: apenas efeito visual ----
+  document.querySelectorAll('.pagination-bar .page-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if(btn.textContent.trim() === '»') return;
+      document.querySelectorAll('.pagination-bar .page-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // ---- busca de capas via Jikan API (mesmo padrão do index.html) ----
+  (async function loadAllImages(){
+    const cache = {};
+    async function fetchCover(query){
+      if(cache[query]) return cache[query];
+      try{
+        const res = await fetch('https://api.jikan.moe/v4/anime?q=' + encodeURIComponent(query) + '&limit=1');
+        const data = await res.json();
+        const img = data?.data?.[0]?.images?.jpg?.large_image_url ?? null;
+        cache[query] = img;
+        return img;
+      }catch(e){
+        console.warn('Jikan falhou para:', query, e);
+        return null;
+      }
+    }
+    const cards = document.querySelectorAll('.card-art[data-anime-query]');
+    for(const el of cards){
+      const q = el.getAttribute('data-anime-query');
+      const img = await fetchCover(q);
+      if(img){
+        el.style.backgroundImage = "url('" + img + "')";
+        el.classList.add('has-photo');
+      }
+      await new Promise(r => setTimeout(r, 350));
+    }
+  })();
+</script>
+</body>
+</html>
