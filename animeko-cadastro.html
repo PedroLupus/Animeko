@@ -38,7 +38,7 @@
         <label for="nome">Nome de usuário</label>
         <div class="input-shell">
           <span>👤</span>
-          <input id="nome" type="text" placeholder="kitsune_92" />
+          <input id="nome" type="text" placeholder="kitsune_92" required />
         </div>
       </div>
 
@@ -46,7 +46,7 @@
         <label for="email">E-mail</label>
         <div class="input-shell">
           <span>✉</span>
-          <input id="email" type="email" placeholder="kitsune_92@exemplo.com" />
+          <input id="email" type="email" placeholder="kitsune_92@exemplo.com" required />
         </div>
       </div>
 
@@ -54,7 +54,7 @@
         <label for="senha">Senha</label>
         <div class="input-shell">
           <span>🔒</span>
-          <input id="senha" type="password" placeholder="••••••••" oninput="atualizarForca(this.value)" />
+          <input id="senha" type="password" placeholder="••••••••" oninput="atualizarForca(this.value)" required minlength="8" />
           <button type="button" class="toggle-pw" onclick="const i=document.getElementById('senha'); i.type = i.type==='password' ? 'text' : 'password'; this.textContent = i.type==='password' ? 'mostrar' : 'ocultar';">mostrar</button>
         </div>
         <div class="pw-strength" id="pwStrength"><i></i><i></i><i></i></div>
@@ -66,20 +66,20 @@
           <label for="confirmar">Confirmar senha</label>
           <div class="input-shell">
             <span>🔒</span>
-            <input id="confirmar" type="password" placeholder="••••••••" />
+            <input id="confirmar" type="password" placeholder="••••••••" required />
           </div>
         </div>
         <div class="field">
           <label for="nasc">Nascimento</label>
           <div class="input-shell">
             <span>🎂</span>
-            <input id="nasc" type="date" />
+            <input id="nasc" type="date" required />
           </div>
         </div>
       </div>
 
       <label class="field-check">
-        <input type="checkbox" />
+        <input type="checkbox" required />
         li e finjo concordar com os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade (inexistente)</a>
       </label>
 
